@@ -18,8 +18,13 @@ class MyApp extends StatelessWidget {
       //home: HomePage(), //καλω την συναρτηση απο το home_page απο το αλλο φακελο
       themeMode: ThemeMode.light, //αλλαζουμε dark και Light
       theme: ThemeData(
-          primarySwatch: Colors
-              .deepPurple), //PRIMARYSWATCH COLORS ABJUSTMENT ALL APP COLOR
+        primarySwatch:
+            Colors.deepPurple, //PRIMARYSWATCH COLORS ABJUSTMENT ALL APP COLOR
+        // fontFamily: GoogleFonts.lato()
+        //     .fontFamily, //Αμα αλλαξει σε ενα σημειο το style αλλαξε παντου
+        // primaryTextTheme: GoogleFonts
+        //     .latoTextTheme(),
+      ),
       darkTheme: ThemeData(
         brightness:
             Brightness.dark, //δεν μπορω να βαλουμε primayrySwatch στο dark Mode
@@ -28,7 +33,7 @@ class MyApp extends StatelessWidget {
         "/": (context) => LoginPage(), //default route
         "/home": (context) => HomePage(),
         "/login": (context) => LoginPage(),
-        },
+      },
     );
   }
 }
