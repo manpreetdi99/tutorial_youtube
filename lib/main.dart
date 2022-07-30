@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:youtube_tut/pages/login_page.dart';
 import 'pages/home_page.dart';
 
 void main() {
@@ -14,7 +15,20 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       //δες την δομη
-      home: HomePage(), //καλω την συναρτηση απο το home_page απο το αλλο φακελο
+      //home: HomePage(), //καλω την συναρτηση απο το home_page απο το αλλο φακελο
+      themeMode: ThemeMode.light, //αλλαζουμε dark και Light
+      theme: ThemeData(
+          primarySwatch: Colors
+              .deepPurple), //PRIMARYSWATCH COLORS ABJUSTMENT ALL APP COLOR
+      darkTheme: ThemeData(
+        brightness:
+            Brightness.dark, //δεν μπορω να βαλουμε primayrySwatch στο dark Mode
+      ),
+      routes: {
+        "/": (context) => LoginPage(), //default route
+        "/home": (context) => HomePage(),
+        "/login": (context) => LoginPage(),
+        },
     );
   }
 }
