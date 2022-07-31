@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:youtube_tut/pages/login_page.dart';
+import 'package:youtube_tut/utils/routes.dart';
 import 'pages/home_page.dart';
 
 void main() {
@@ -31,8 +32,9 @@ class MyApp extends StatelessWidget {
       ),
       routes: {
         "/": (context) => LoginPage(), //default route
-        "/home": (context) => HomePage(),
-        "/login": (context) => LoginPage(),
+        MyRoutes.homeRoute: (context) => HomePage(),
+        MyRoutes.loginRoute: (context) =>
+            LoginPage(), //καταλληλο για το navigator
       },
     );
   }
