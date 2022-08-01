@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:youtube_tut/pages/login_page.dart';
 import 'package:youtube_tut/utils/routes.dart';
 import 'pages/home_page.dart';
+import 'widgets/drawer.dart';
 
 void main() {
   runApp(MyApp());
@@ -26,10 +27,12 @@ class MyApp extends StatelessWidget {
         // primaryTextTheme: GoogleFonts
         //     .latoTextTheme(),
       ),
+      debugShowCheckedModeBanner: false, //αποκρυψη του debug
       darkTheme: ThemeData(
         brightness:
             Brightness.dark, //δεν μπορω να βαλουμε primayrySwatch στο dark Mode
       ),
+      initialRoute: MyRoutes.homeRoute,
       routes: {
         "/": (context) => LoginPage(), //default route
         MyRoutes.homeRoute: (context) => HomePage(),

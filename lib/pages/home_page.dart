@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:youtube_tut/widgets/drawer.dart';
 
 class HomePage extends StatelessWidget {
   final num days = 30; //περνει και int και float τιμες
@@ -15,7 +16,7 @@ class HomePage extends StatelessWidget {
           child: Text("welcome to $days days flutter $name"),
         ),
       ),
-      drawer: Drawer(), //πλαινο μενου
+      drawer: MyDrawer(), //πλαινο μενου
     );
   }
 }
