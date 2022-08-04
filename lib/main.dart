@@ -3,6 +3,7 @@ import 'package:youtube_tut/pages/login_page.dart';
 import 'package:youtube_tut/utils/routes.dart';
 import 'pages/home_page.dart';
 import 'widgets/drawer.dart';
+import 'widgets/themes.dart';
 
 void main() {
   runApp(MyApp());
@@ -19,14 +20,14 @@ class MyApp extends StatelessWidget {
       //δες την δομη
       //home: HomePage(), //καλω την συναρτηση απο το home_page απο το αλλο φακελο
       themeMode: ThemeMode.light, //αλλαζουμε dark και Light
-      theme: ThemeData(
-        primarySwatch:
-            Colors.deepPurple, //PRIMARYSWATCH COLORS ABJUSTMENT ALL APP COLOR
-        // fontFamily: GoogleFonts.lato()
-        //     .fontFamily, //Αμα αλλαξει σε ενα σημειο το style αλλαξε παντου
-        // primaryTextTheme: GoogleFonts
-        //     .latoTextTheme(),
-      ),
+      theme: MyTheme.lightTheme(
+          context), //βαλαμε theme σε εξωτερικο φακελο σε αλλη κλαση //ThemeData
+      // primarySwatch:
+      //     Colors.deepPurple, //PRIMARYSWATCH COLORS ABJUSTMENT ALL APP COLOR
+      // fontFamily: GoogleFonts.lato()
+      //     .fontFamily, //Αμα αλλαξει σε ενα σημειο το style αλλαξε παντου
+      // primaryTextTheme: GoogleFonts
+      //     .latoTextTheme(),
       debugShowCheckedModeBanner: false, //αποκρυψη του debug
       darkTheme: ThemeData(
         brightness:
