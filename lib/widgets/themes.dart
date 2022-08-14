@@ -11,7 +11,7 @@ class MyTheme {
       ));
 
   static ThemeData darkTheme(BuildContext context) => ThemeData(
-        primarySwatch: Colors.deepPurple,
+        //primarySwatch: Colors.deepPurple,
         brightness: Brightness.dark,
       );
 }
